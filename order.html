@@ -44,6 +44,7 @@
       </div>
 
       <div class="row">
+        <!-- Food items. First column. -->
         <div class="col s3">
           <div class="card">
             <div class="card-image">
@@ -71,6 +72,7 @@
           </div>
         </div>
 
+        <!-- Food items. Second column. -->
         <div class="col s3">
           <div class="card">
             <div class="card-image">
@@ -98,6 +100,7 @@
           </div>
         </div>
 
+        <!-- Delivery form -->
         <div class="col s6">
           <table class="striped" id="table-of-orders">
             <thead>
@@ -124,6 +127,7 @@
             </tfoot>
           </table>
 
+          <!-- Customer data input form -->
           <form action="index.html" method="post" id="delivery-form">
             <div class="row valign-wrapper">
               <div class="col s1">
@@ -131,7 +135,7 @@
               </div>
               <div class="col s11">
                 <label for="customer-name">Name</label>
-                <input id="customer-name" type="text" class="validate">
+                <input id="customer-name" type="text" class="validate" required>
               </div>
             </div>
 
@@ -156,6 +160,7 @@
             </div>
           </form>
 
+          <!-- Order button -->
           <div class="row">
             <div class="col s8 right">
               <a href="order.html" id="order-button" class="btn-large pink lighten-1">Place Order</a>
@@ -194,7 +199,6 @@
 
 
 
-    <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/order.js"></script>

@@ -34,12 +34,22 @@ for (var id of ["burger", "ribs", "pizza", "ice_cream"]) {
 }
 
 
-// "Place order" event listener and handler
+// "Place order" button. Event listener and handler.
 $('#order-button').click((event) => {
   event.preventDefault(); // so <a href="#"> does not scroll
   if (subtotal === 0) {
     Materialize.toast('No order was placed. There is currently nothing in the order list.', 4000);
   } else {
     Materialize.toast('Your order has been placed. Bon appetit!', 4000);
+
+    // Reset order button to prevent duplicate orders
+    $('#order-button').off('click');
+    $('#order-button').click((event) => {
+      event.preventDefault(); // so <a href="#"> does not scroll
+      Materialize.toast('This order was already placed, but please click one more time if you want to start another order.', 5000);
+
+      // Reset again to just make a link to reload page.
+      $('#order-button').off('click');
+    });
   }
 });
