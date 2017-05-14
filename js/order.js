@@ -53,3 +53,9 @@ $('#order-button').click((event) => {
     });
   }
 });
+
+
+// To make a hamburger menu for small screens
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+});

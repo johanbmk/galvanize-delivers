@@ -24,8 +24,13 @@
     <nav>
       <div class="nav-wrapper blue darken-3">
         <a href="index.html" class="brand-logo">Galvanize Delivers</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down blue darken-4">
-          <li><a href="order.html">Order Delivery</a></li>
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a href="order.html">Order Delivery</a></li>
+        </ul>
+        <ul class="left side-nav" id="mobile-menu">
+          <li><a href="index.html">Home Page</a></li>
+          <li class="active"><a href="order.html">Order Delivery</a></li>
         </ul>
       </div>
     </nav>
@@ -34,18 +39,11 @@
 
     <!-- Grid area -->
     <div class="container">
-      <div class="row">
-        <div class="col s6">
-          <h4 class="black-text">Menu</h4>
-        </div>
-        <div class="col s6">
-          <h4 class="black-text">Order</h4>
-        </div>
-      </div>
 
       <div class="row">
         <!-- Food items. First column. -->
-        <div class="col s3">
+        <div class="col s12 m3 l3">
+          <h4 class="black-text">Menu</h4>
           <div class="card">
             <div class="card-image">
               <img src="img/burger.jpg">
@@ -73,7 +71,7 @@
         </div>
 
         <!-- Food items. Second column. -->
-        <div class="col s3">
+        <div class="col s12 m3 l3">
           <div class="card">
             <div class="card-image">
               <img src="img/pizza.jpg">
@@ -101,7 +99,8 @@
         </div>
 
         <!-- Delivery form -->
-        <div class="col s6">
+        <div class="col s12 m6 l6">
+          <h4 class="black-text">Order</h4>
           <table class="striped" id="table-of-orders">
             <thead>
               <tr>
@@ -130,39 +129,39 @@
           <!-- Customer data input form -->
           <form action="index.html" method="post" id="delivery-form">
             <div class="row valign-wrapper">
-              <div class="col s1">
+              <div class="col s1 m1 l1">
                 <i class="material-icons red-text text-darken-2">account_circle</i>
               </div>
-              <div class="col s11">
+              <div class="col s11 m22 l11">
                 <label for="customer-name">Name</label>
                 <input id="customer-name" type="text" class="validate" required>
               </div>
             </div>
 
             <div class="row valign-wrapper">
-              <div class="col s1">
+              <div class="col s1 m1 l1">
                 <i class="material-icons red-text text-darken-2">call</i>
               </div>
-              <div class="col s11">
+              <div class="col s11 m11 l11">
                 <label for="customer-tel">Phone number</label>
-                <input type="tel" name="customer-tel" id="customer-tel" class="validate">
+                <input type="tel" name="customer-tel" id="customer-tel" class="validate" required>
               </div>
             </div>
 
             <div class="row valign-wrapper">
-              <div class="col s1">
+              <div class="col s1 m1 l1">
                 <i class="material-icons red-text text-darken-2">business</i>
               </div>
-              <div class="col s11">
+              <div class="input-field col s11 m11 l11">
                 <label for="customer-address">Address</label>
-                <textarea name="second-text" rows="3" id="customer-address"></textarea>
+                <textarea name="address" id="customer-address" class="materialize-textarea"></textarea>
               </div>
             </div>
           </form>
 
           <!-- Order button -->
           <div class="row">
-            <div class="col s8 right">
+            <div class="col s9 m9 l9 right">
               <a href="order.html" id="order-button" class="btn-large pink lighten-1">Place Order</a>
             </div>
           </div>
@@ -178,11 +177,11 @@
     <footer class="page-footer blue darken-3">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
+          <div class="col s12 m12 l6">
             <h5 class="white-text">Galvanize Delivers</h5>
             <p class="grey-text text-lighten-4">Fine Dining, Delivered.</p>
           </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col s12 l4 offset-l2">
             <ul>
               <li><a class="grey-text text-lighten-3" href="home.html">Home</a></li>
               <li><a class="grey-text text-lighten-3" href="order.html">Order Delivery</a></li>
